@@ -1,0 +1,119 @@
+{
+	"variables": [],
+	"info": {
+		"name": "reduxBlog",
+		"_postman_id": "48205255-bae6-8605-ee34-03c821db342e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all post",
+			"request": {
+				"url": "http://localhost:3000/api/posts",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get detail one post",
+			"request": {
+				"url": "http://localhost:3000/api/posts/1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create one post",
+			"request": {
+				"url": "http://localhost:3000/api/posts",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Woo",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "categories",
+							"value": "Ronaldo",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "content",
+							"value": "Portugal",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update one post",
+			"request": {
+				"url": "http://localhost:3000/api/posts/19",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Wooo",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "categories",
+							"value": "Ronaldo",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "content",
+							"value": "Portugal",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete one post",
+			"request": {
+				"url": "http://localhost:3000/api/posts/2",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

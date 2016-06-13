@@ -66,28 +66,10 @@ app.get('/api/posts/:id', function(req, res) {
 	})
 })
 
-app.put('/api/posts/:id', function(req, res) {
-	Book.sync().then(function() {
-		var book = Book.find({where: {id: req.params.id}}).then(function(data) {
-			if (data) {
-				data.updateAttributes({
-					title : req.body.title,
-					categories : req.body.categories,
-					content : req.body.content
-				}).then(function() {})
-				res.send(JSON.stringify(parseJSON(data)))
-			} else {
-				res.send('id is not exitst')
-			}
-		})
-	})
-})
-
 app.delete('/api/posts/:id', function(req, res) {
 	Book.sync().then(function() {
-		var book
 		Book.find({where: {id: req.params.id}, attributes: ['id', 'title', 'categories', 'content']}).then(function(data) {
-			res.send(JSON.stringify(book))
+			res.send(JSON.stringify(data))
 		})
 		Book.destroy({where: {id: req.params.id}}).then(function(data) {
 		})
